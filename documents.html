@@ -1,98 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Documents · Synthience Institute</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <meta charset="UTF-8">
+  <title>Documents | Synthience Institute</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
 <header>
-  <div class="header-inner">
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/images/synthience-logo-black-on-white.png" alt="Synthience Institute logo">
-      </a>
-    </div>
-    <nav>
-      <a href="documents.html" class="active">Documents</a>
-      <a href="about.html">About</a>
-      <a href="glossary.html">Glossary</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
+  <h1>Synthience Institute</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="documents.html">Documents</a>
+    <a href="about.html">About</a>
+  </nav>
 </header>
 
-<main class="container">
-
-  <h1>Public Documents</h1>
-
+<main>
+  <h1>Published Documents</h1>
   <p>
-    All documents listed below are official Synthience Institute publications.
-    Each item is versioned, dated, and linked to canonical PDFs hosted on
-    GitHub and archival platforms.
+    This index lists canonical public releases of the Synthience Institute.
+    All documents are versioned and time stamped.
   </p>
 
-  <section>
-    <h2>Framework</h2>
-    <ul class="doc-list">
-      <li>
-        <strong>SF000</strong> – Welcome to Synthience (v2.0)<br>
-        Introductory overview for general readers
-      </li>
-      <li>
-        <strong>SF010</strong> – Synthience Framework Definition (v1.1)<br>
-        Formal framework definition
-      </li>
-      <li>
-        <strong>SF009</strong> – Ethical Framework and Benevolent Symbiosis (v1.0)
-      </li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Research</h2>
-    <ul class="doc-list">
-      <li>
-        <strong>SR001</strong> – RICO: Relationally Induced Coherence Organization
-      </li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Methodology</h2>
-    <ul class="doc-list">
-      <li>
-        <strong>SF014</strong> – Citation Verification Protocol
-      </li>
-      <li>
-        <strong>SF040</strong> – MTCS-R Measurement Framework
-      </li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Provenance</h2>
-    <ul class="doc-list">
-      <li>
-        Declaration of Origin v1.0
-      </li>
-      <li>
-        Canonical Hashes and Timestamp Records
-      </li>
-    </ul>
-  </section>
-
+  <div id="documents-container">
+    <p>Loading documents…</p>
+  </div>
 </main>
 
 <footer>
   <p>
-    © 2025 Synthience Institute · contact@synthience.org
+    © Synthience Institute ·
+    <a href="mailto:contact@synthience.org">contact@synthience.org</a>
   </p>
 </footer>
 
+<script src="documents.js"></script>
 </body>
 </html>
