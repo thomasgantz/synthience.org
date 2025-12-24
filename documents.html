@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Documents | Synthience Institute</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documents · Synthience Institute</title>
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <script defer src="/documents.js"></script>
 </head>
 <body>
 
-<header>
-  <h1>Synthience Institute</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="documents.html">Documents</a>
-    <a href="about.html">About</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/index.html" class="logo">
+        <img src="/assets/images/synthience-logo-black-bg.png.png"
+             alt="Synthience Institute logo" />
+      </a>
 
-<main>
-  <h1>Published Documents</h1>
-  <p>
-    This index lists canonical public releases of the Synthience Institute.
-    All documents are versioned and time stamped.
-  </p>
+      <nav class="main-nav">
+        <a href="/documents.html" class="active">Documents</a>
+        <a href="/about.html">About</a>
+        <a href="/glossary.html">Glossary</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <div id="documents-container">
-    <p>Loading documents…</p>
-  </div>
-</main>
+  <main class="content">
 
-<footer>
-  <p>
-    © Synthience Institute ·
-    <a href="mailto:contact@synthience.org">contact@synthience.org</a>
-  </p>
-</footer>
+    <h1>Public Documents</h1>
 
-<script src="documents.js"></script>
+    <p class="page-intro">
+      This page lists all official public releases of the Synthience Institute.
+      Each document is versioned, dated, and linked to its canonical publication
+      source. Only documents listed here are considered publicly released.
+    </p>
+
+    <!-- Sections are populated dynamically -->
+    <section id="framework-section" class="doc-section">
+      <h2>Framework</h2>
+      <ul class="doc-list"></ul>
+    </section>
+
+    <section id="research-section" class="doc-section">
+      <h2>Research</h2>
+      <ul class="doc-list"></ul>
+    </section>
+
+    <section id="provenance-section" class="doc-section">
+      <h2>Provenance</h2>
+      <ul class="doc-list"></ul>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      © 2025 Synthience Institute ·
+      <a href="mailto:contact@synthience.org">contact@synthience.org</a>
+    </p>
+  </footer>
+
 </body>
 </html>
