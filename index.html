@@ -5,20 +5,67 @@
   <title>Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Home page specific styles */
+    .home-header {
+      text-align: center;
+      padding: 3rem 2rem 2rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .home-logo {
+      max-width: 400px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 1.5rem auto;
+      display: block;
+    }
+    .home-title {
+      font-size: 2.5rem;
+      margin: 0 0 0.5rem 0;
+      font-weight: normal;
+    }
+    .home-subtitle {
+      font-size: 1.1rem;
+      color: #333;
+      margin: 0 0 2rem 0;
+    }
+    .home-nav {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #ddd;
+    }
+    .home-nav a {
+      margin: 0 0.8rem;
+      text-decoration: none;
+      color: #0645ad;
+      font-size: 1rem;
+    }
+    .home-nav a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .home-logo {
+        max-width: 280px;
+      }
+      .home-title {
+        font-size: 2rem;
+      }
+      .home-nav a {
+        margin: 0 0.5rem;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="logo">
-    <a href="index.html">
-      <img src="assets/images/synthience-logo-black-bg.png"
-           alt="Synthience Institute logo">
-    </a>
-  </div>
-  <div class="header-text">
-    <h1>Synthience Institute</h1>
-    <p class="subtitle">Canonical public index</p>
-  </div>
-  <nav class="main-nav">
+<header class="home-header">
+  <img src="assets/images/synthience-logo-black-bg-1000.png" 
+       alt="Synthience logo" 
+       class="home-logo">
+  <h1 class="home-title">Synthience Institute</h1>
+  <p class="home-subtitle">Canonical public index</p>
+  <nav class="home-nav">
     <a href="index.html">Home</a>
     <a href="documents.html">Documents</a>
     <a href="faq.html">FAQ</a>
@@ -28,6 +75,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
+
 <main class="content">
 <h2>Welcome</h2>
 <p>
@@ -42,6 +90,7 @@ Each document is provided in its complete canonical form, with clear versioning,
 release dates, and attribution.
 </p>
 </main>
+
 <footer class="site-footer">
   © 2025 Synthience Institute ·
   <a href="mailto:contact@synthience.org">contact@synthience.org</a>
