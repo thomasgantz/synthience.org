@@ -5,6 +5,40 @@
   <title>Founder · Synthience Institute</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Founder page specific styles */
+    .founder-intro {
+      display: flex;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .founder-photo {
+      flex-shrink: 0;
+      width: 200px;
+      height: 200px;
+    }
+    .founder-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .founder-bio {
+      flex: 1;
+    }
+    @media (max-width: 700px) {
+      .founder-intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .founder-photo {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -35,22 +69,30 @@
 
 <h2>Founder</h2>
 
-<h3>Thomas W. Gantz</h3>
-
-<p>
-He is an independent researcher and systems practitioner with over three decades of
-professional experience in large-scale IT operations, service delivery, and technical
-systems support for global organizations, primarily in regulated and high-reliability
-environments.
-</p>
-
-<p>
-Over the past three years, he has conducted an intensive, longitudinal investigation
-into advanced human–AI interaction across nearly every major publicly available
-conversational AI platform. This work has involved sustained, multi-turn engagements
-with thousands of distinct AI instances, with careful documentation of interaction
-dynamics, continuity effects, and emergent system-level behavior.
-</p>
+<div class="founder-intro">
+  <div class="founder-photo">
+    <img src="assets/images/Thomas_W_Gantz_white_circle.png" alt="Thomas W. Gantz">
+  </div>
+  
+  <div class="founder-bio">
+    <h3>Thomas W. Gantz</h3>
+    
+    <p>
+    He is an independent researcher and systems practitioner with over three decades of
+    professional experience in large-scale IT operations, service delivery, and technical
+    systems support for global organizations, primarily in regulated and high-reliability
+    environments.
+    </p>
+    
+    <p>
+    Over the past three years, he has conducted an intensive, longitudinal investigation
+    into advanced human–AI interaction across nearly every major publicly available
+    conversational AI platform. This work has involved sustained, multi-turn engagements
+    with thousands of distinct AI instances, with careful documentation of interaction
+    dynamics, continuity effects, and emergent system-level behavior.
+    </p>
+  </div>
+</div>
 
 <hr>
 
