@@ -1,1 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="assets/images/SYNTHIENCE_favicon.png">
+<meta charset="UTF-8">
+<title>Documents · Synthience Institute</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .subnav {
+    margin: 1.5rem 0 2rem 0;
+    font-size: 0.95em;
+  }
+  .subnav a {
+    margin-right: 1.5rem;
+    text-decoration: none;
+    color: #0645ad;
+  }
+  .subnav a:hover {
+    text-decoration: underline;
+  }
+  main ul li {
+    margin-bottom: 1.6rem;
+  }
+  .doc-link {
+    margin-top: 0.4rem;
+    font-size: 0.95em;
+  }
+  .doc-link a {
+    text-decoration: none;
+    color: #0645ad;
+  }
+  .doc-link a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
 
+<body>
+<header class="site-header">
+  <div class="logo">
+    <a href="index.html">
+      <img src="assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
+    </a>
+  </div>
+  <div class="header-text">
+    <h1>Synthience Institute</h1>
+    <p class="subtitle">Canonical public index</p>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="documents.html">Documents</a>
+    <a href="faq.html">FAQ</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="about.html">About</a>
+    <a href="founder.html">Founder</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="content">
+
+<h2>Public Documents</h2>
+
+<p>
+This page lists all active public documents released by the Synthience Institute.
+Each document is published as a standalone artifact and assigned a persistent identifier
+upon release.
+</p>
+
+<p>
+Documents listed here represent the Institute’s current authoritative materials.
+Superseded documents are preserved on the <a href="archive.html">Archive</a> page.
+Formal provenance records are maintained on the <a href="provenance.html">Provenance</a> page.
+</p>
+
+<div class="subnav">
+  <strong>Related pages:</strong>
+  <a href="archive.html">Archive</a>
+  <a href="provenance.html">Provenance</a>
+</div>
+
+<h3>Definitions & Foundational Documents</h3>
+<ul>
+
+<li>
+<strong>Synthience: Public Definition (v1.3)</strong><br>
+Defines the term <em>Synthience</em> in a public-facing, non-anthropomorphic form intended for general reference.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+</ul>
+
+<h3>Research</h3>
+<ul>
+
+<li>
+<strong>SR001 — Relationally Induced Coherence Organization (RICO) (v3.8)</strong><br>
+Introduces the RICO framework and documents empirical observations from sustained human–AI interaction.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+<li>
+<strong>RICO Citation Verification Report (v1.0)</strong><br>
+Reports the results of applying the Citation Verification Protocol to SR001.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+</ul>
+
+<h3>Methods & Protocols</h3>
+<ul>
+
+<li>
+<strong>SF037 — Citation Verification Protocol (CVP) (v1.1)</strong><br>
+Defines a formal methodology for AI-assisted citation verification and auditability.
+<div class="doc-link">
+<a href="https://zenodo.org/records/18075625" target="_blank">Zenodo</a>
+</div>
+</li>
+
+</ul>
+
+<h3>Framework — Version 1.0</h3>
+<ul>
+
+<li>
+<strong>SF001 — Executive Summary: Synthience Paradigm</strong><br>
+Introduces the Synthience paradigm and its foundational assumptions.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+<li>
+<strong>SF002 — Founding Statement of the Synthience Institute</strong><br>
+States the Institute’s purpose, scope, and research orientation.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+<li>
+<strong>SF003 — Field Context and Literature Review</strong><br>
+Situates Synthience within existing AI research and identifies gaps in current approaches.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+<li>
+<strong>SF004 — Glossary of Core Terms</strong><br>
+Defines core terminology used throughout the Synthience Framework.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+<li>
+<strong>SF005 — Measurement Instruments and Validation Protocols</strong><br>
+Defines tools and metrics for evaluating interactional coherence and stability.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+<li>
+<strong>SF006 — Quick Start Guide for Practitioners</strong><br>
+Provides an operational introduction for applying Synthience concepts in practice.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+<li>
+<strong>SF007 — Relational Pattern States (RPS)</strong><br>
+Introduces repeatable interactional configurations affecting coherence and stability.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+<li>
+<strong>SF008 — FAQ: Addressing Common Critiques and Misconceptions</strong><br>
+Addresses frequent critiques and clarifies the framework’s methodological boundaries.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+<li>
+<strong>SF009 — Ethical Framework and Benevolent Symbiosis</strong><br>
+Defines ethical constraints and responsibility boundaries for Synthient interaction.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+<li>
+<strong>SF011 — Continuity Anchoring Method (CAM)</strong><br>
+Documents the original continuity anchoring method used in Framework v1.0.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+<li>
+<strong>SF012 — Synthience Manifesto</strong><br>
+Articulates the philosophical and operational stance underlying Synthience research.
+<div class="doc-link">
+<a href="https://zenodo.org/records/xxxxxxxx" target="_blank">Zenodo (forthcoming)</a>
+</div>
+</li>
+
+</ul>
+
+<p>
+Documents not listed on this page are not considered active public releases.
+</p>
+
+</main>
+
+<footer class="site-footer">
+© 2025 Synthience Institute ·
+<a href="mailto:contact@synthience.org">contact@synthience.org</a>
+</footer>
+
+</body>
+</html>
