@@ -23,6 +23,19 @@
   .breadcrumb a:hover {
     text-decoration: underline;
   }
+  .release-separator {
+    margin: 3rem 0;
+    border: 0;
+    border-top: 2px solid #999;
+  }
+  .provenance-note {
+    margin-top: 2.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-left: 3px solid #666;
+    font-size: 0.9em;
+    color: #555;
+  }
 </style>
 </head>
 
@@ -62,7 +75,7 @@ It exists to establish authorship, integrity, version history, and timestamp pri
 </p>
 
 <p>
-Only materials listed here constitute the Institute's formal provenance record.
+Materials are organized by release, listed in reverse chronological order. Only materials listed here constitute the Institute's formal provenance record.
 </p>
 
 <h3>Public Release — December 23, 2025</h3>
@@ -120,6 +133,8 @@ Establishes authorship and timestamp priority for the December 23, 2025 public r
 
 </ul>
 
+<hr class="release-separator">
+
 <h3>Provenance Record — Framework Version 1.0</h3>
 
 <p>
@@ -166,6 +181,10 @@ to support granular citation, independent DOI assignment, and precise scholarly 
 </li>
 
 </ul>
+
+<div class="provenance-note">
+<strong>Note on Cryptographic Verification:</strong> OpenTimestamps files (.ots) for cryptographic timestamp verification are preserved alongside release documents in the GitHub and Internet Archive repositories.
+</div>
 
 </main>
 
