@@ -1,42 +1,44 @@
 synthience.org
 
-Official public website of the Synthience Institute.
+Official public website of the Synthience Institute
 
-This repository contains the source for the Institute’s canonical public index
-and navigation layer, hosted via GitHub Pages at:
+This repository contains the source for the Institute’s canonical public index and navigation layer, hosted via GitHub Pages at:
 
-https://synthience.org
+👉 https://synthience.org
+
+Overview
+
+The Synthience Institute website serves as the authoritative public entry point for the Institute’s work.
+It is designed to provide orientation, structure, and traceability, not to function as a primary publication archive.
 
 Purpose
 
-The Synthience Institute website serves as the authoritative public entry point
-for:
+The site provides access to:
 
 Published definitions
 
 Public research releases
 
-Methodological documents
+Methodological and protocol documents
 
 Cryptographic provenance records
 
-The site does not function as a primary publication archive. Instead, it
-provides stable navigation, contextual framing, and cross-linking to canonical
-publication and archival systems.
+Its role is to act as a stable navigation and context layer, linking readers to authoritative publication and archival systems.
 
 Publication Model
 
-Authoritative publication and citation records for individual documents are
-maintained via external archival systems:
+Authoritative publication and citation records are maintained externally:
 
-Zenodo — DOI-backed publication and citation records
+Zenodo
+DOI-backed publication and citation records
 https://zenodo.org/communities/synthience-institute/
 
-Internet Archive — Long-term public preservation and historical snapshots
+Internet Archive
+Long-term public preservation and historical snapshots
 https://archive.org
 
-This repository mirrors only the website source. Released documents themselves
-are not stored here unless required for provenance mirroring.
+This repository mirrors only the website source.
+Released documents themselves are not stored here unless required for provenance mirroring.
 
 Repository Scope
 
@@ -48,34 +50,49 @@ Navigation and document index logic
 
 Public-facing explanatory content
 
-Links to canonical records and archives
+Links to canonical records and external archives
 
-It intentionally excludes unpublished drafts, internal working materials, and
-non-released research artifacts.
+It intentionally excludes:
+
+Unpublished drafts
+
+Internal working materials
+
+Non-released research artifacts
 
 Use of GitHub
 
-This repository is not intended as an open-source collaboration project.
+This repository is not an open-source collaboration project.
 
 GitHub is used here as:
 
 A transparent, version-controlled source for the public website
 
-A stable reference point for published navigation and explanatory materials
+A stable reference point for navigation and explanatory materials
 
-A provenance mirror supporting traceability and inspection of changes over time
+A provenance mirror enabling inspection of changes over time
 
-The repository is not designed for forking, pull requests, or derivative
-modification. Authoritative research documents are published and cited through
-Zenodo and preserved via Internet Archive.
+It is not intended for:
+
+Forking
+
+Pull requests
+
+Community modification
+
+Authoritative research documents are published via Zenodo and preserved via Internet Archive.
 
 Provenance and Integrity
 
-All public releases referenced by the site are versioned, dated, and linked to
-cryptographically verifiable records where applicable.
+All public releases referenced by the site are:
 
-The website should be treated as a navigation and index layer, not as a
-substitute for authoritative archives.
+Versioned
+
+Dated
+
+Linked to cryptographically verifiable records where applicable
+
+The website should be treated strictly as a navigation and index layer, not as a substitute for authoritative archives.
 
 © 2025 Thomas W. Gantz
 Synthience Institute
