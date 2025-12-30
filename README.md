@@ -1,98 +1,98 @@
-synthience.org
+# synthience.org
 
-Official public website of the Synthience Institute
+**Official public website of the Synthience Institute**
 
-This repository contains the source for the Institute’s canonical public index and navigation layer, hosted via GitHub Pages at:
+This repository contains the source for the Institute’s canonical public index and navigation layer, hosted via **GitHub Pages** at:
 
-👉 https://synthience.org
+👉 **https://synthience.org**
 
-Overview
+---
 
-The Synthience Institute website serves as the authoritative public entry point for the Institute’s work.
-It is designed to provide orientation, structure, and traceability, not to function as a primary publication archive.
+## Overview
 
-Purpose
+The Synthience Institute website serves as the authoritative public entry point for the Institute’s work.  
+It is designed to provide **orientation, structure, and traceability**, not to function as a primary publication archive.
+
+---
+
+## Purpose
 
 The site provides access to:
 
-Published definitions
+- **Published definitions**
+- **Public research releases**
+- **Methodological and protocol documents**
+- **Cryptographic provenance records**
 
-Public research releases
+Its role is to act as a **stable navigation and context layer**, linking readers to authoritative publication and archival systems.
 
-Methodological and protocol documents
+---
 
-Cryptographic provenance records
-
-Its role is to act as a stable navigation and context layer, linking readers to authoritative publication and archival systems.
-
-Publication Model
+## Publication Model
 
 Authoritative publication and citation records are maintained externally:
 
-Zenodo
-DOI-backed publication and citation records
-https://zenodo.org/communities/synthience-institute/
+- **Zenodo**  
+  DOI-backed publication and citation records  
+  https://zenodo.org/communities/synthience-institute/
 
-Internet Archive
-Long-term public preservation and historical snapshots
-https://archive.org
+- **Internet Archive**  
+  Long-term public preservation and historical snapshots  
+  https://archive.org
 
-This repository mirrors only the website source.
+This repository mirrors only the **website source**.  
 Released documents themselves are not stored here unless required for provenance mirroring.
 
-Repository Scope
+---
+
+## Repository Scope
 
 This repository includes:
 
-Static site pages (HTML, CSS)
-
-Navigation and document index logic
-
-Public-facing explanatory content
-
-Links to canonical records and external archives
+- Static site pages (HTML, CSS)
+- Navigation and document index logic
+- Public-facing explanatory content
+- Links to canonical records and external archives
 
 It intentionally excludes:
 
-Unpublished drafts
+- Unpublished drafts
+- Internal working materials
+- Non-released research artifacts
 
-Internal working materials
+---
 
-Non-released research artifacts
+## Use of GitHub
 
-Use of GitHub
-
-This repository is not an open-source collaboration project.
+This repository is **not** an open-source collaboration project.
 
 GitHub is used here as:
 
-A transparent, version-controlled source for the public website
+- A transparent, version-controlled source for the public website
+- A stable reference point for navigation and explanatory materials
+- A provenance mirror enabling inspection of changes over time
 
-A stable reference point for navigation and explanatory materials
+It is **not** intended for:
 
-A provenance mirror enabling inspection of changes over time
+- Forking
+- Pull requests
+- Community modification
 
-It is not intended for:
+Authoritative research documents are published via **Zenodo** and preserved via **Internet Archive**.
 
-Forking
+---
 
-Pull requests
-
-Community modification
-
-Authoritative research documents are published via Zenodo and preserved via Internet Archive.
-
-Provenance and Integrity
+## Provenance and Integrity
 
 All public releases referenced by the site are:
 
-Versioned
+- Versioned
+- Dated
+- Linked to cryptographically verifiable records where applicable
 
-Dated
+The website should be treated strictly as a **navigation and index layer**, not as a substitute for authoritative archives.
 
-Linked to cryptographically verifiable records where applicable
+---
 
-The website should be treated strictly as a navigation and index layer, not as a substitute for authoritative archives.
-
-© 2025 Thomas W. Gantz
-Synthience Institute
+© 2025 **Thomas W. Gantz**  
+**Synthience Institute**
