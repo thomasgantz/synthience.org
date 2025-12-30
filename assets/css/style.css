@@ -1,4 +1,10 @@
 /* Base layout */
+html {
+  /* Ensures consistent horizontal alignment across pages
+     in Chromium browsers when scrollbars appear/disappear */
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   padding: 0;
