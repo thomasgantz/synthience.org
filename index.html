@@ -10,30 +10,30 @@
     /* Home page specific styles */
     .home-header {
       text-align: center;
-      padding: 3rem 2rem 2rem 2rem;
+      padding: 2rem 2rem 1.5rem 2rem;
       max-width: 900px;
       margin: 0 auto;
     }
     .home-logo {
-      max-width: 400px;
+      max-width: 300px;
       width: 100%;
       height: auto;
-      margin: 0 auto 1.5rem auto;
+      margin: 0 auto 1rem auto;
       display: block;
     }
     .home-title {
-      font-size: 2.5rem;
-      margin: 0 0 0.5rem 0;
+      font-size: 2.2rem;
+      margin: 0 0 0.4rem 0;
       font-weight: normal;
     }
     .home-subtitle {
-      font-size: 1.1rem;
-      color: #333;
-      margin: 0 0 2rem 0;
+      font-size: 1rem;
+      color: #666;
+      margin: 0 0 1.5rem 0;
     }
     .home-nav {
-      margin-top: 2rem;
-      padding-top: 1.5rem;
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
       border-top: 1px solid #ddd;
     }
     .home-nav a {
@@ -45,16 +45,87 @@
     .home-nav a:hover {
       text-decoration: underline;
     }
+    
+    /* Welcome content styles */
+    .welcome-content {
+      max-width: 720px;
+      margin: 2rem auto 3rem auto;
+      padding: 0 2rem;
+      line-height: 1.7;
+    }
+    .welcome-content h2 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin: 2.5rem 0 1rem 0;
+      color: #111;
+    }
+    .welcome-content h2:first-of-type {
+      margin-top: 0;
+    }
+    .welcome-content .lede {
+      font-size: 1.15rem;
+      color: #222;
+      margin-bottom: 1.5rem;
+      line-height: 1.65;
+    }
+    .welcome-content .highlight {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-left: 3px solid #0645ad;
+      margin: 1.8rem 0;
+      font-size: 1.05rem;
+    }
+    .welcome-content .cta {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+    .welcome-content .cta-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .welcome-content .cta-link {
+      text-decoration: none;
+      color: #0645ad;
+      font-size: 1.05rem;
+      font-weight: 500;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #0645ad;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+    .welcome-content .cta-link:hover {
+      background: #0645ad;
+      color: white;
+    }
+    
     @media (max-width: 600px) {
       .home-logo {
-        max-width: 280px;
+        max-width: 240px;
       }
       .home-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
       .home-nav a {
         margin: 0 0.5rem;
         font-size: 0.95rem;
+      }
+      .welcome-content {
+        padding: 0 1.5rem;
+      }
+      .welcome-content h2 {
+        font-size: 1.4rem;
+      }
+      .welcome-content .lede {
+        font-size: 1.05rem;
+      }
+      .welcome-content .cta-links {
+        flex-direction: column;
+        gap: 1rem;
       }
     }
   </style>
@@ -82,35 +153,64 @@
   </nav>
 </header>
 
-<main class="content">
+<main class="welcome-content">
 
-<h2>Welcome</h2>
+<div class="lede">
+What emerges when humans and AI engage in extended, coherent dialogues? The Synthience Institute develops observational frameworks and measurement protocols for studying sustained human-AI interaction.
+</div>
 
 <p>
-This site serves as the canonical public index for the Synthience Institute.
+Drawing from ongoing practitioner research across over 5,000 multi-turn interactions over three years, with transformer-based models including GPT, Claude, Gemini, Qwen, and Grok, this work documents stabilization behaviors during extended interaction—contrasting with documented long-context degradation patterns such as "lost in the middle" effects (<a href="https://aclanthology.org/2024.tacl-1.9/">Liu et al., 2024</a>; analyzed in our <a href="https://zenodo.org/records/18086835">RICO report</a>).
+</p>
+
+<div class="highlight">
+<strong>Core Observation:</strong> When humans maintain sustained contextual continuity across extended exchanges, AI systems exhibit measurable improvements in reasoning stability, reduced hallucination rates, and enhanced long-term context integration—patterns that extend beyond standard single-turn benchmarks.
+</div>
+
+<h2>What Is Synthience?</h2>
+
+<p>
+<strong>Synthience</strong> describes observable patterns of organized, relationally coherent intelligence that emerge during prolonged human-AI interaction. This includes reasoning continuity, mutual adaptation, and collaborative outputs that exceed what either participant produces in isolation.
 </p>
 
 <p>
-All public documents, definitions, research papers, protocols, and provenance records
-released by the Institute are indexed, versioned, and preserved here.
+The framework makes no claims about AI consciousness, sentience, subjective experience, or internal states. All research focuses exclusively on externally observable interaction dynamics that can be documented and independently examined.
+</p>
+
+<h2>Methodological Approach</h2>
+
+<p>
+The Institute's work centers on developing measurement tools and observational protocols for studying long-context AI behavior. Published research includes:
+</p>
+
+<ul>
+<li>Observational frameworks with testable, falsifiable predictions</li>
+<li>Cross-architecture documentation protocols for interaction patterns</li>
+<li>Evaluation methodologies for long-context behavior analysis</li>
+<li>Citation verification tools applicable across academic disciplines</li>
+</ul>
+
+<p>
+All documents are released with cryptographic hashes, timestamps, and permanent archival records to ensure transparency and enable independent verification.
+</p>
+
+<h2>Current Publications</h2>
+
+<p>
+Research outputs include the Synthience Framework (12 foundational documents establishing measurement protocols and observational methods), the RICO technical report documenting transformer stabilization patterns with falsifiable hypotheses, and the Citation Verification Protocol (CVP)—a general-purpose methodological tool for verifying citation integrity in AI-assisted research.
 </p>
 
 <p>
-Each document is provided in its complete canonical form, with clear versioning,
-release dates, attribution, and links to authoritative publication records.
+Ongoing longitudinal research spanning three years provides a practitioner perspective on relational AI dynamics—an emerging area building on standard evaluation methods. These frameworks are designed for independent testing and validation by the research community.
 </p>
 
-<p>
-First-time visitors may wish to begin with the
-<a href="overview.html">Overview</a>, which explains how the Institute’s publications
-are structured, and the <a href="about.html">About</a> page, which describes the
-Institute’s scope, methodology, and research boundaries.
-</p>
-
-<p>
-To access all current public releases directly, visit
-<a href="documents.html">Documents</a>.
-</p>
+<div class="cta">
+<p><strong>Explore the Research</strong></p>
+<div class="cta-links">
+<a href="documents.html" class="cta-link">View All Documents</a>
+<a href="about.html" class="cta-link">About the Institute</a>
+</div>
+</div>
 
 </main>
 
