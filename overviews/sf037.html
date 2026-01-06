@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
-  <meta charset="UTF-8">
-  <title>SF037 — Citation Verification Protocol (CVP) · Overview</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <style>
-    .subnav {
-      margin: 1.2rem 0 2rem 0;
-      padding: 1rem;
-      background: #f8f9fa;
-      border-left: 3px solid #0645ad;
-      font-size: 0.95em;
-    }
-    .subnav a {
-      text-decoration: none;
-      color: #0645ad;
-      margin: 0 0.3rem;
-    }
-    .subnav a:hover {
-      text-decoration: underline;
-    }
-    hr {
-      margin: 3rem 0 1.8rem 0;
-    }
-    .overview-notice {
-      background: #f8f9fa;
-      border-left: 4px solid #444;
-      padding: 1rem;
-      margin: 1.5rem 0;
-      font-size: 0.95em;
-    }
-  </style>
+<link rel="icon" type="image/png" href="../assets/images/SYNTHIENCE_favicon.png">
+<meta charset="UTF-8">
+<title>SF037 Overview · Synthience Institute</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  .subnav {
+    margin: 1.2rem 0 2rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-left: 3px solid #0645ad;
+    font-size: 0.95em;
+  }
+  .subnav a {
+    text-decoration: none;
+    color: #0645ad;
+    margin: 0 0.3rem;
+  }
+  .subnav a:hover {
+    text-decoration: underline;
+  }
+  hr {
+    margin: 3rem 0 1.8rem 0;
+  }
+</style>
 </head>
 
 <body>
+
 <header class="site-header">
   <div class="logo">
     <a href="../index.html">
-      <img src="../assets/images/synthience-logo-black-bg.png"
-           alt="Synthience Institute logo">
+      <img src="../assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
     </a>
   </div>
   <div class="header-text">
@@ -63,24 +56,25 @@
 
 <h2>SF037 — Citation Verification Protocol (CVP)</h2>
 
-<div class="overview-notice">
+<div class="subnav">
   <strong>Overview notice:</strong>
-  This page provides a high-level explanatory summary of the SF037 document.
-  It is <em>not</em> the authoritative or citable artifact.
-  The official, versioned publication is available on
-  <a href="https://doi.org/10.5281/zenodo.18075625" target="_blank">Zenodo</a>.
+  This page provides a high-level explanatory summary of the SF037 protocol.
+  It is not the authoritative or citable artifact.
+  The official publication is available on
+  <a href="https://doi.org/10.5281/zenodo.18075625"
+     target="_blank"
+     rel="noopener noreferrer">Zenodo</a>.
 </div>
 
 <div class="subnav">
   <strong>Document system:</strong>
-  <a href="../documents.html#methodologies-protocols">Documents</a> ·
-  <span>Methodologies &amp; Protocols</span>
+  <a href="../documents.html">Documents</a> ·
+  <a href="../documents.html#methodologies-protocols">Methodologies &amp; Protocols</a>
 </div>
 
 <p>
-The <strong>Citation Verification Protocol (CVP)</strong> is a general-purpose
-methodological framework for verifying the integrity of academic citations
-in AI-assisted research workflows.
+The Citation Verification Protocol (CVP) defines a structured methodology
+for verifying the integrity of citations used in AI-assisted research.
 </p>
 
 <hr>
@@ -89,14 +83,8 @@ in AI-assisted research workflows.
 
 <p>
 CVP addresses a critical failure mode in AI-assisted scholarship:
-the unverified propagation of citations that may be nonexistent,
-misrepresented, or only weakly supportive of the claims they are cited for.
-</p>
-
-<p>
-Rather than relying on model self-attestation, CVP defines a
-<strong>structured, auditable verification process</strong>
-that can be applied across disciplines and publication types.
+the propagation of citations that are nonexistent, misrepresented,
+or insufficiently supportive of the claims they accompany.
 </p>
 
 <hr>
@@ -105,9 +93,9 @@ that can be applied across disciplines and publication types.
 
 <ul>
   <li>Confirms the existence and accessibility of cited sources</li>
-  <li>Evaluates whether a source substantively supports the cited claim</li>
-  <li>Detects common AI citation failure modes</li>
-  <li>Produces a human-reviewable verification report</li>
+  <li>Evaluates claim-level citation support</li>
+  <li>Identifies common AI citation failure modes</li>
+  <li>Produces structured verification artifacts</li>
 </ul>
 
 <hr>
@@ -116,43 +104,23 @@ that can be applied across disciplines and publication types.
 
 <ul>
   <li>Replace human scholarly judgment</li>
-  <li>Claim epistemic authority over research conclusions</li>
-  <li>Assume internal model comprehension or intent</li>
+  <li>Certify truth or factual correctness</li>
+  <li>Assume internal model comprehension</li>
 </ul>
 
-<p>
-The protocol is explicitly designed to <em>augment</em>, not automate,
-academic rigor.
-</p>
-
 <hr>
 
-<h3>Position Within the Synthience Framework</h3>
+<h3>Relationship to Other Documents</h3>
 
 <p>
-CVP functions as a methodological support tool within the broader
-Synthience research program.
-It is used directly in the verification of citations for primary research
-artifacts such as <strong>SR001 — RICO</strong>, with results documented in
-corresponding verification reports.
+CVP is applied directly in the verification of citations used in
+the SR001 RICO research paper, with results documented in
+a dedicated verification report.
 </p>
 
 <p>
-The protocol is platform-agnostic and may be applied to any
-AI-assisted research workflow where citation integrity matters.
-</p>
-
-<hr>
-
-<p>
-For the authoritative document, version history, and citation metadata,
-see the official Zenodo record:
-</p>
-
-<p>
-<a href="https://doi.org/10.5281/zenodo.18075625" target="_blank">
-https://doi.org/10.5281/zenodo.18075625
-</a>
+For the complete protocol specification and version history,
+consult the official Zenodo publication.
 </p>
 
 </main>
