@@ -95,7 +95,7 @@ ul {
   text-decoration: underline;
 }
 
-/* Anchor offset for fixed header navigation */
+/* Anchor offset for section navigation */
 h3 {
-  scroll-margin-top: 140px;
+  scroll-margin-top: 120px;
 }
