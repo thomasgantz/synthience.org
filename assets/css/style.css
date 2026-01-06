@@ -94,3 +94,8 @@ ul {
 .subnav a:hover {
   text-decoration: underline;
 }
+
+/* Anchor offset for fixed header navigation */
+h3 {
+  scroll-margin-top: 140px;
+}
