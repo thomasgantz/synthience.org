@@ -10,19 +10,9 @@
   /* Founder page specific styles */
   .founder-intro {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
     margin-bottom: 2rem;
-  }
-  .founder-photo {
-    flex-shrink: 0;
-    width: 200px;
-    height: 200px;
-  }
-  .founder-photo img {
-    width: 100%;
-    height: 100%;
-    display: block;
   }
   .founder-bio {
     flex: 1;
@@ -30,13 +20,8 @@
   @media (max-width: 700px) {
     .founder-intro {
       flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .founder-photo {
-      width: 180px;
-      height: 180px;
-      margin-bottom: 1rem;
+      align-items: flex-start;
+      text-align: left;
     }
   }
 </style>
@@ -72,10 +57,6 @@
 <h2>Founder</h2>
 
 <div class="founder-intro">
-  <div class="founder-photo">
-    <img src="assets/images/Thomas_W_Gantz_white_circle.png" alt="Thomas W. Gantz">
-  </div>
-
   <div class="founder-bio">
     <h3>Thomas W. Gantz</h3>
 
