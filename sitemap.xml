@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+lol<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://synthience.org/</loc>
@@ -32,12 +32,5 @@
     <loc>https://synthience.org/contact.html</loc>
     <lastmod>2026-01-19</lastmod>
   </url>
-  <url>
-    <loc>https://synthience.org/provenance.html</loc>
-    <lastmod>2026-01-19</lastmod>
-  </url>
-  <url>
-    <loc>https://synthience.org/archive.html</loc>
-    <lastmod>2026-01-19</lastmod>
-  </url>
+
 </urlset>
