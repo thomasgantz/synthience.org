@@ -22,7 +22,7 @@ main {
 
 /* Header */
 header {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 1.5rem 2rem 1rem 2rem;
 }
@@ -53,9 +53,10 @@ nav {
 }
 
 nav a {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   text-decoration: none;
   color: #0645ad;
+  font-size: 0.95rem;
 }
 
 nav a:hover {
@@ -98,4 +99,24 @@ ul {
 /* Anchor offset for section navigation */
 h3 {
   scroll-margin-top: 120px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header {
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+  main {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  nav a {
+    font-size: 0.88rem;
+    margin-right: 0.3rem;
+  }
+  footer {
+    padding: 0 1rem;
+  }
 }
