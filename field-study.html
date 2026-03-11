@@ -43,7 +43,7 @@
     .s-btn.primary { background: #c8604a; border-color: #c8604a; color: #fff; }
     .s-btn.primary:hover { background: #b3503c; border-color: #b3503c; }
     .s-btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin-bottom: 5px; }
-    #canvas-container { width: 100%; overflow: hidden; }
+    #canvas-container { width: 100%; overflow: hidden; padding: 1px; box-sizing: border-box; }
     #canvas-container canvas { display: block !important; max-width: 100% !important; border-radius: 6px; border: 1.5px solid #c8c4b8; }
     .canvas-loading { padding: 3rem; color: #aaa; font-size: 0.9rem; }
     .study-description h3 { font-size: 1.1rem; font-weight: 500; color: #111; margin: 2rem 0 0.8rem 0; }
@@ -58,11 +58,11 @@
     .study-canvas-wrap { width: 100%; margin-bottom: 1.5rem; }
     /* Below-canvas row: sidebar fixed, description fluid */
     .study-below { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 3rem; }
-    .study-sidebar { width: 270px; flex-shrink: 0; }
+    .study-sidebar { width: 270px; min-width: 270px; max-width: 270px; flex-shrink: 0; flex-grow: 0; }
     .study-description { flex: 1; min-width: 0; border-top: none; padding-top: 0; max-width: none; }
     @media (max-width: 900px) {
       .study-below { flex-direction: column; align-items: flex-start; }
-      .study-sidebar { width: 270px !important; flex-shrink: 0; }
+      .study-sidebar { width: 270px !important; min-width: 270px !important; max-width: 270px !important; flex-shrink: 0 !important; flex-grow: 0 !important; }
       .study-description { width: 100%; min-width: 0; }
       .study-shell { padding: 1rem; }
     }
