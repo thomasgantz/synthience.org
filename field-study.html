@@ -297,15 +297,14 @@ function setup() {
     initializeSystem();
 }
 
+var resizeTimer;
 function windowResized() {
-    var sz = getCanvasSize();
-    resizeCanvas(sz, sz);
-    if (pgTrails) {
-        pgTrails.remove();
-        pgTrails = createGraphics(width, height);
-        pgTrails.colorMode(RGB, 255, 255, 255, 255);
-        pgTrails.background(250, 249, 245);
-    }
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        var sz = getCanvasSize();
+        resizeCanvas(sz, sz);
+        initializeSystem();
+    }, 150);
 }
 
 function initializeSystem() {
