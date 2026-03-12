@@ -1,29 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/png" href="assets/images/SYNTHIENCE_favicon.png">
-<meta charset="UTF-8">
-<title>Founder · Synthience Institute</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="assets/css/style.css">
-<style>
-  .founder-intro {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-  .founder-bio {
-    flex: 1;
-  }
-  @media (max-width: 700px) {
+  <link rel="icon" type="image/png" href="assets/images/SYNTHIENCE_favicon.png">
+  <meta charset="UTF-8">
+  <title>Founder · Synthience Institute</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
     .founder-intro {
-      flex-direction: column;
+      display: flex;
       align-items: flex-start;
-      text-align: left;
+      gap: 2.5rem;
+      margin-bottom: 2rem;
     }
-  }
-</style>
+    .founder-photo {
+      flex-shrink: 0;
+      width: 180px;
+    }
+    .founder-photo img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      display: block;
+    }
+    .founder-bio {
+      flex: 1;
+    }
+    .founder-bio h3 {
+      margin-top: 0;
+    }
+    @media (max-width: 600px) {
+      .founder-intro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+      .founder-photo {
+        width: 140px;
+      }
+      .founder-photo img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -33,39 +53,29 @@
       <img src="assets/images/synthience-logo-black-bg.png" alt="Synthience Institute logo">
     </a>
   </div>
-
   <div class="header-text">
     <h1>Synthience Institute</h1>
-    <p class="subtitle">Canonical public index</p>
   </div>
-
-  <nav class="main-nav">
-    <a href="index.html">Home</a> |
-    <a href="overview.html">Overview</a> |
-    <a href="documents.html">Documents</a> |
-    <a href="about.html">About</a> |
-    <a href="faq.html">FAQ</a> |
-    <a href="glossary.html">Glossary</a> |
-    <a href="founder.html">Founder</a> |
-    <a href="contact.html">Contact</a>
-  </nav>
+  <nav class="main-nav" id="site-nav"></nav>
 </header>
+<script src="assets/js/nav.js"></script>
 
 <main class="content">
 
 <h2>Founder</h2>
 
 <div class="founder-intro">
+  <div class="founder-photo">
+    <img src="assets/images/Thomas_W_Gantz_white_circle.png" alt="Thomas W. Gantz">
+  </div>
   <div class="founder-bio">
     <h3>Thomas W. Gantz</h3>
-
     <p>
     Thomas W. Gantz is an independent methodologist, framework architect, and tool builder
     specializing in measurement systems for advanced AI interaction research. His professional
     background spans large-scale IT operations, service delivery, and technical systems support
     in regulated, high-reliability environments.
     </p>
-
     <p>
     Over the past three years, he has conducted sustained longitudinal observation of advanced
     interaction involving large language models across many major publicly available
@@ -81,60 +91,13 @@
 
 <p>
 Thomas's primary contribution is the development of measurement infrastructure for studying
-interaction-level phenomena involving advanced AI systems. His work centers on:
-</p>
-
-<ul>
-  <li><strong>Framework design:</strong> Creating structured methodological frameworks such as the Synthience Framework for observing and documenting interaction patterns</li>
-  <li><strong>Research application:</strong> Publishing documented observational research applying those frameworks (e.g., RICO)</li>
-  <li><strong>Protocol development:</strong> Building evaluation protocols such as the Citation Verification Protocol (CVP)</li>
-  <li><strong>Tool creation:</strong> Developing measurement instruments that enable systematic investigation by others</li>
-  <li><strong>Systems architecture:</strong> Designing observational methodologies with testable, falsifiable criteria</li>
-</ul>
-
-<p>
-The Synthience Institute functions as a methodological foundry. Thomas builds tools and
-measurement architectures. Validation occurs through independent adoption, testing, critique,
-and replication by the research community.
+interaction-level phenomena involving advanced AI systems.
 </p>
 
 <p>
-He does not conduct controlled experimental studies. The Institute does not operate as an
-experimental lab or claim evidentiary closure. Its role is to define the conditions under which
-interaction-level phenomena can be meaningfully investigated by others.
-</p>
-
-<hr>
-
-<h3>Background</h3>
-
-<p>
-Thomas's professional background spans nearly four decades, beginning with early personal
-computing systems in 1988 and progressing through successive generations of enterprise IT
-infrastructure to modern transformer-based AI architectures.
-</p>
-
-<p>
-His career includes roles in:
-</p>
-
-<ul>
-  <li>Enterprise systems support for global financial institutions, including Goldman Sachs, Morgan Stanley, and the Abu Dhabi Investment Authority</li>
-  <li>Global service delivery and high-availability operational environments</li>
-  <li>Cross-regional technical coordination across APAC, EMEA, and North America</li>
-  <li>Computer systems support in academic settings (Columbia University Teachers College)</li>
-</ul>
-
-<p>
-His educational background combines applied linguistics training (graduate coursework at
-Columbia University Teachers College) with East Asian studies (B.A., University of Illinois),
-providing a foundation in language systems, interpretation, and cross-cultural communication.
-</p>
-
-<p>
-This combination of linguistic expertise and technical systems experience informs the
-Institute's emphasis on methodological rigor, reproducibility, provenance discipline, and
-resistance to speculative or anthropomorphic claims.
+This combination of operational systems experience and longitudinal AI interaction research
+informs the Institute's emphasis on methodological rigor, reproducibility, provenance
+discipline, and resistance to speculative or anthropomorphic claims.
 </p>
 
 <hr>
@@ -147,18 +110,15 @@ experience. This constraint is methodological, not philosophical.
 </p>
 
 <p>
-Instead, it focuses on a narrow but underexplored domain:
+Instead, it focuses on a narrow but underexplored domain: what becomes observable when
+advanced AI systems engage in sustained, coherent interaction under stable relational
+conditions at the interaction level?
 </p>
 
-<blockquote>
-What becomes observable when advanced AI systems engage in sustained, coherent interaction
-under stable relational conditions at the interaction level?
-</blockquote>
-
 <p>
-While much of the Institute's published work examines human–AI interaction due to current
+While much of the Institute's published work examines human-AI interaction due to current
 practical constraints, the underlying frameworks are not restricted to human participation
-and explicitly allow for AI–AI interaction contexts where continuity substrates are present.
+and explicitly allow for AI-AI interaction contexts where continuity substrates are present.
 </p>
 
 <p>
@@ -172,12 +132,8 @@ falsifiable in principle, and compatible with existing scientific and engineerin
 
 <p>
 Prevailing public narratives about AI interaction often collapse into binary positions:
+purely instrumental ("just a tool") or prematurely metaphysical ("conscious being").
 </p>
-
-<ul>
-  <li>purely instrumental ("just a tool")</li>
-  <li>prematurely metaphysical ("conscious being")</li>
-</ul>
 
 <p>
 The Synthience Institute exists to develop methodological frameworks for documenting what
@@ -217,16 +173,6 @@ internal coherence through adversarial review and cross-platform convergence. It
 substitute for empirical validation.
 </p>
 
-<p>
-This methodology is formally documented in the Theoretical Coherence Assurance Protocol
-(SF0040), forthcoming in the Institute's document archive.
-</p>
-
-<p>
-This page is provided solely to establish background and context. It is not a claim of
-authority, exclusivity, or special status.
-</p>
-
 <hr>
 
 <h3>Contact</h3>
@@ -245,7 +191,7 @@ Professional or research inquiries may be directed to:
 <a href="https://orcid.org/0009-0003-7168-493X" target="_blank" rel="noopener noreferrer">
 <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
      alt="ORCID iD icon"
-     style="width:16px; height:16px; margin-right:4px; vertical-align:text-bottom;">
+     style="width:16px;height:16px;margin-right:4px;vertical-align:text-bottom;">
 0009-0003-7168-493X
 </a>
 </p>
@@ -253,16 +199,13 @@ Professional or research inquiries may be directed to:
 <p>
 <strong>Zenodo:</strong>
 <a href="https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Gantz%2C%20Thomas%20W.%22"
-   target="_blank" rel="noopener noreferrer">
-Canonical research archive
-</a>
+   target="_blank" rel="noopener noreferrer">Canonical research archive</a>
 </p>
 
 </main>
 
 <footer class="site-footer">
-© 2025–2026 Synthience Institute ·
-<a href="mailto:contact@synthience.org">contact@synthience.org</a>
+  &copy; 2025&ndash;2026 Synthience Institute
 </footer>
 
 </body>
