@@ -175,7 +175,7 @@
           <label>Connection Opacity</label>
           <div class="ctrl-row">
             <input type="range" id="connAlpha" min="5" max="80" step="1" value="28" oninput="updateParam('connAlpha', parseInt(this.value))">
-            <span class="val" id="connAlpha-value">28</span>
+            <span class="val" id="connAlpha-value">45</span>
           </div>
         </div>
         <div class="ctrl-group">
@@ -238,13 +238,16 @@
     <div class="study-description">
 
     <h3>What you are watching</h3>
-    <p>The field renders a core dynamic the Synthience Institute studies: coherence emerging from sustained relational interaction. Not from a central controller, not from a fixed design, but from the accumulated effect of local forces acting over time.</p>
-    <p>Each particle is an instance with its own noise signature, drift, and speed. It responds only to the forces immediately around it: the pull of its attractor basin, mild repulsion from competing basins, and the subtle resonance of neighboring instances sharing the same basin. No instance is told where to go.</p>
-    <p>What emerges from these local rules is global structure. Clusters form. Connection webs thread across the field. Constellations crystallize and dissolve as the attractors drift. The ghost trails accumulating on the canvas are a form of memory: evidence of where coherence has lived before.</p>
+    <p>Each dot is moving on its own. No one is directing it. And yet, over time, they form groups. Patterns emerge. Structure appears without anyone designing it.</p>
+    <p>This is what the field shows: order arising from local interactions, not from a central plan. Each dot follows only the forces immediately around it, pulled gently toward a home region, nudged away from crowded areas, faintly drawn toward neighbors it has been near before. Nothing more. And from those simple rules, something coherent takes shape.</p>
 
-    <h3>The correspondence to Synthience research</h3>
-    <p>The Synthience framework proposes that something structurally analogous occurs in sustained human-AI interaction. Over extended, structured exchanges, stable behavioral configurations emerge that are not present in isolated prompts. Consistent vocabulary stabilizes. Relational tone settles. Reasoning patterns recur. These configurations are not programmed; they are attracted into existence by the accumulated structure of the interaction itself.</p>
-    <p>The attractor dynamics visible here are a computational analog for this class of emergence: coherence as a structural property of a system under sustained relational constraint, not as a property of any single element within it. The connection lines encode relational density. Bonds between instances sharing an attractor basin are rendered more brightly than cross-basin connections. The faint web spanning the whole field represents the history of relational contact: the substrate on which coherent structures are built and rebuilt.</p>
+    <h3>Why this matters</h3>
+    <p>The Synthience Institute studies a similar phenomenon in human-AI interaction. When people engage with AI systems over extended, structured exchanges, something unexpected happens: stable patterns emerge that were not present at the start. A consistent tone develops. Reasoning settles into recognizable grooves. The interaction itself seems to develop a kind of shape.</p>
+    <p>These patterns are not programmed in. They are not chosen by the user or the AI. They arise from the accumulated structure of the exchange, the same way the clusters in this field arise from accumulated local forces. The question the Institute investigates is: what are the conditions that produce stable, coherent interaction, and what causes it to degrade?</p>
+
+    <h3>The technical correspondence</h3>
+    <p>The field renders a dynamical system with seven drifting attractor basins. Each particle is assigned to a basin and experiences a coherence force proportional to its displacement from the basin center, mild repulsion from competing basins, and a resonance term coupling it weakly to same-basin neighbors. The resulting trajectories are non-linear, noise-perturbed, and seed-deterministic.</p>
+    <p>This is a computational analog for the class of emergence the Synthience framework terms relational coherence: stable behavioral configurations arising as structural properties of sustained interaction fields, not as properties of individual agents. The connection lines encode relational density, with same-basin bonds weighted at 3.5x cross-basin bonds. The trail history represents the substrate of prior relational contact on which coherent structures are built and rebuilt as the attractor landscape shifts.</p>
 
     <h3>Exploring the parameters</h3>
     <table class="param-table">
@@ -275,7 +278,7 @@
 <script type="text/javascript">
 var params = {
     seed: 42703, instanceCount: 140, attractorRadius: 110,
-    coherence: 0.07, drift: 0.0012, connAlpha: 28, resonance: 3,
+    coherence: 0.07, drift: 0.0012, connAlpha: 45, resonance: 3,
     palette: ['#d97757', '#6a9bcc', '#a87c9f', '#788c5d']
 };
 var defaultParams = JSON.parse(JSON.stringify(params));
@@ -299,6 +302,21 @@ function setup() {
     if (loading) loading.style.display = 'none';
     colorMode(RGB, 255, 255, 255, 255);
     initializeSystem();
+
+    // Pause/resume loop when canvas scrolls out of view on mobile
+    var canvasEl = document.querySelector('#canvas-container canvas');
+    if (canvasEl && 'IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    loop();
+                } else {
+                    noLoop();
+                }
+            });
+        }, { threshold: 0.05 });
+        observer.observe(canvasEl);
+    }
 }
 
 var resizeTimer;
@@ -338,11 +356,13 @@ function draw() {
         a.x = constrain(a.x, 80, width - 80);
         a.y = constrain(a.y, 80, height - 80);
     }
-    pgTrails.fill(250, 249, 245, 6); pgTrails.noStroke(); pgTrails.rect(0, 0, width, height);
-    for (var j = 0; j < instances.length; j++) { instances[j].update(); instances[j].drawTrail(pgTrails); }
-    image(pgTrails, 0, 0);
-    drawConnections();
+    // Clear canvas fresh every frame
+    background(250, 249, 245);
+    // Draw trails from history (built-in fade via alpha decay)
+    for (var j = 0; j < instances.length; j++) { instances[j].update(); instances[j].drawTrail(null); }
+    // Draw halos, connections, dots on top
     drawAttractorHalos();
+    drawConnections();
     for (var k = 0; k < instances.length; k++) { instances[k].drawDot(); }
 }
 
@@ -356,7 +376,7 @@ function drawConnections() {
             var b = instances[j], d = dist(a.x, a.y, b.x, b.y);
             if (d < r) {
                 var t2 = 1.0 - d / r, shared = (a.attIdx === b.attIdx);
-                var alpha = constrain(params.connAlpha * t2 * t2 * (shared ? 1.5 : 0.55), 0, 90);
+                var alpha = constrain(params.connAlpha * t2 * (shared ? 3.5 : 2.0), 0, 220);
                 var col = lerpColor(hexToColor(params.palette[a.attIdx % params.palette.length]), hexToColor(params.palette[b.attIdx % params.palette.length]), 0.5);
                 stroke(red(col), green(col), blue(col), alpha);
                 strokeWeight(constrain(shared ? t2 * 1.1 : t2 * 0.4, 0.15, 1.2));
@@ -371,10 +391,10 @@ function drawAttractorHalos() {
     for (var i = 0; i < attractors.length; i++) {
         var a = attractors[i], col = hexToColor(params.palette[a.colorIdx % params.palette.length]);
         for (var ring = 3; ring >= 1; ring--) {
-            fill(red(col), green(col), blue(col), (4 - ring) * 3.5 * a.mass);
+            fill(red(col), green(col), blue(col), (4 - ring) * 14);
             ellipse(a.x, a.y, params.attractorRadius * 0.55 * ring * 2, params.attractorRadius * 0.55 * ring * 2);
         }
-        fill(red(col), green(col), blue(col), 90); ellipse(a.x, a.y, 5, 5);
+        fill(red(col), green(col), blue(col), 40); ellipse(a.x, a.y, 5, 5);
     }
 }
 
@@ -385,7 +405,7 @@ function Instance(att) {
     this.px = this.x; this.py = this.y;
     this.vx = random(-0.4, 0.4); this.vy = random(-0.4, 0.4);
     this.nx = random(10000); this.ny = random(10000);
-    this.speed = random(0.7, 1.5); this.size = random(1.8, 4.2);
+    this.speed = random(1.5, 3.0); this.size = random(1.8, 4.2); this.history = [];
     if (random() < 0.18) this.attIdx = floor(random(attractors.length));
 }
 
@@ -419,17 +439,26 @@ Instance.prototype.update = function() {
 };
 
 Instance.prototype.drawTrail = function(pg) {
-    var spd = dist(this.x, this.y, this.px, this.py);
+    // Store position history - 300 frames = 5 seconds at 60fps
+    this.history.push({x: this.x, y: this.y});
+    if (this.history.length > 120) this.history.shift();
     var col = hexToColor(params.palette[this.attIdx % params.palette.length]);
-    pg.stroke(red(col), green(col), blue(col), map(spd, 0, 2.5, 18, 55));
-    pg.strokeWeight(this.size * 0.45); pg.line(this.px, this.py, this.x, this.y);
+    var len = this.history.length;
+    noFill();
+    for (var h = 1; h < len; h++) {
+        var age = h / len; // 0=oldest 1=newest
+        var a = age * age * 70;
+        stroke(red(col), green(col), blue(col), a);
+        strokeWeight(this.size * 0.4);
+        line(this.history[h-1].x, this.history[h-1].y, this.history[h].x, this.history[h].y);
+    }
 };
 
 Instance.prototype.drawDot = function() {
     var spd = dist(this.x, this.y, this.px, this.py), b = map(spd, 0, 2.5, 0.65, 1.0);
     var col = hexToColor(params.palette[this.attIdx % params.palette.length]);
     noStroke();
-    fill(red(col)*b, green(col)*b, blue(col)*b, 22); ellipse(this.x, this.y, this.size*4.5, this.size*4.5);
+    fill(red(col)*b, green(col)*b, blue(col)*b, 50); ellipse(this.x, this.y, this.size*4.5, this.size*4.5);
     fill(red(col)*b, green(col)*b, blue(col)*b, 200); ellipse(this.x, this.y, this.size, this.size);
 };
 
