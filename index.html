@@ -94,37 +94,20 @@
   <div class="header-text">
     <h1>Synthience Institute</h1>
   </div>
-  <nav class="main-nav">
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="overview.html">Overview</a> |
-    <a href="documents.html">Documents</a> |
-    <a href="field-notes.html">Field Notes</a> |
-    <a href="practitioner-guides.html">Practitioner Guides</a> |
-    <a href="field-study.html">Live Field</a> |
-    <a href="updates.html">Updates</a> |
-    <a href="faq.html">FAQ</a> |
-    <a href="glossary.html">Glossary</a> |
-    <a href="founder.html">Founder</a> |
-    <a href="contact.html">Contact</a>
-  </nav>
+  <nav class="main-nav" id="site-nav"></nav>
 </header>
 
 <main class="study-shell">
 
-  <div style="max-width: 680px; margin: 0 0 2rem 0;">
-    <h1 style="font-size: 1.5rem; font-weight: 500; color: #111; margin: 0 0 0.5rem 0; font-family: 'Lora', serif;">Synthience Institute</h1>
-    <p style="font-size: 0.97rem; line-height: 1.7; color: #444; margin: 0;">
-      We study what happens between humans and AI systems during sustained interaction,
-      and what that means for both. The field below is a live visualization of the
-      relational dynamics at the center of that research.
-    </p>
+  <div style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin: 0 0 0.6rem 0; border-bottom: 1px solid #e0dcd4; padding-bottom: 0.6rem;">
+    <div>
+      <span style="font-size:1.1rem; font-weight:600; color:#111; font-family:'Lora',serif;">Synthience Institute</span>
+      <span style="font-size:0.88rem; color:#888; margin-left:0.8rem; font-style:italic;">Relational Coherence: Field Study</span>
+    </div>
+    <span style="font-size:0.82rem; color:#aaa; font-style:italic;">Controls and description below</span>
   </div>
 
-  <h2 class="study-title">Relational Coherence: Field Study</h2>
-  <p class="study-byline">An interactive generative study &middot; Synthience Institute &middot; 2026</p>
-
-  <p class="study-hint">The field is live. Controls and description are below.</p>
+  <p style="font-size:0.9rem; color:#555; margin: 0 0 0.8rem 0; line-height:1.6;">We study what emerges from sustained relational interaction -- between humans and AI, AI and AI, and institutions built around both.</p>
 
   <div class="study-canvas-wrap">
     <div id="canvas-container">
@@ -300,6 +283,7 @@
   &copy; 2025&ndash;2026 Synthience Institute
 </footer>
 
+<script src="assets/js/nav.js"></script>
 <script type="text/javascript">
 var params = {
     seed: 42703, instanceCount: 140, attractorRadius: 110,
