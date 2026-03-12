@@ -341,8 +341,9 @@ function initializeSystem() {
     pgTrails.background(250, 249, 245);
     attractors = [];
     for (var i = 0; i < NUM_ATTRACTORS; i++) {
-        var angle = (TWO_PI / NUM_ATTRACTORS) * i + random(-0.4, 0.4);
-        var r = random(140, 320);
+        var angle = (TWO_PI / NUM_ATTRACTORS) * i + random(-0.3, 0.3);
+        // Keep spawn radius tighter so attractors start closer to center
+        var r = random(80, min(width, height) * 0.28);
         attractors.push({ x: width/2 + cos(angle)*r, y: height/2 + sin(angle)*r, ox: random(1000), oy: random(1000), colorIdx: floor(random(params.palette.length)), mass: random(0.6, 1.4) });
     }
     instances = [];
@@ -357,15 +358,15 @@ function draw() {
         var a = attractors[i];
         a.x += (noise(a.ox + t * 0.3) * 2 - 1) * 0.55;
         a.y += (noise(a.oy + t * 0.3) * 2 - 1) * 0.55;
-        // Gentle centering force to prevent corner crowding over time
+        // Constant gentle pull toward center -- always active, scales with distance
         var cx = width / 2, cy = height / 2;
         var dx = cx - a.x, dy = cy - a.y;
         var dist = sqrt(dx*dx + dy*dy);
-        var maxDist = min(width, height) * 0.42;
-        if (dist > maxDist) {
-            a.x += dx * 0.004;
-            a.y += dy * 0.004;
-        }
+        // Gentle always-on force: 0.003% of distance per frame, stronger past 35% radius
+        var maxDist = min(width, height) * 0.35;
+        var strength = dist > maxDist ? 0.006 : 0.0015;
+        a.x += dx * strength;
+        a.y += dy * strength;
         a.x = constrain(a.x, 80, width - 80);
         a.y = constrain(a.y, 80, height - 80);
     }
@@ -447,8 +448,12 @@ Instance.prototype.update = function() {
     var spd = sqrt(this.vx*this.vx + this.vy*this.vy), maxSpd = 2.2 * this.speed;
     if (spd > maxSpd) { this.vx = (this.vx/spd)*maxSpd; this.vy = (this.vy/spd)*maxSpd; }
     this.x += this.vx; this.y += this.vy;
-    if (this.x < 10) { this.x = 10; this.vx *= -0.6; } if (this.x > width-10) { this.x = width-10; this.vx *= -0.6; }
-    if (this.y < 10) { this.y = 10; this.vy *= -0.6; } if (this.y > height-10) { this.y = height-10; this.vy *= -0.6; }
+    // Edge handling: bounce but also add a pull back toward attractor so dots don't pin to edges
+    var edgeMargin = 10;
+    if (this.x < edgeMargin) { this.x = edgeMargin; this.vx = abs(this.vx) * 0.6 + 0.3; }
+    if (this.x > width - edgeMargin) { this.x = width - edgeMargin; this.vx = -abs(this.vx) * 0.6 - 0.3; }
+    if (this.y < edgeMargin) { this.y = edgeMargin; this.vy = abs(this.vy) * 0.6 + 0.3; }
+    if (this.y > height - edgeMargin) { this.y = height - edgeMargin; this.vy = -abs(this.vy) * 0.6 - 0.3; }
 };
 
 Instance.prototype.drawTrail = function(pg) {
