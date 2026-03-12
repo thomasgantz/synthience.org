@@ -342,8 +342,8 @@ function initializeSystem() {
     attractors = [];
     for (var i = 0; i < NUM_ATTRACTORS; i++) {
         var angle = (TWO_PI / NUM_ATTRACTORS) * i + random(-0.3, 0.3);
-        // Keep spawn radius tighter so attractors start closer to center
-        var r = random(80, min(width, height) * 0.28);
+        // Spread attractors well apart but not too close to edges
+        var r = random(min(width,height)*0.18, min(width,height)*0.36);
         attractors.push({ x: width/2 + cos(angle)*r, y: height/2 + sin(angle)*r, ox: random(1000), oy: random(1000), colorIdx: floor(random(params.palette.length)), mass: random(0.6, 1.4) });
     }
     instances = [];
@@ -356,16 +356,15 @@ function draw() {
     t += 0.0035;
     for (var i = 0; i < attractors.length; i++) {
         var a = attractors[i];
-        a.x += (noise(a.ox + t * 0.3) * 2 - 1) * 0.55;
-        a.y += (noise(a.oy + t * 0.3) * 2 - 1) * 0.55;
-        // Very gentle constant pull toward center -- just enough to counter long-term drift
-        var cx = width / 2, cy = height / 2;
-        var adx = cx - a.x, ady = cy - a.y;
-        var adist = sqrt(adx*adx + ady*ady);
-        var maxDist = min(width, height) * 0.38;
-        var strength = adist > maxDist ? 0.003 : 0.0006;
-        a.x += adx * strength;
-        a.y += ady * strength;
+        // Livelier drift
+        a.x += (noise(a.ox + t * 0.3) * 2 - 1) * 0.9;
+        a.y += (noise(a.oy + t * 0.3) * 2 - 1) * 0.9;
+        // Only correct when genuinely near an edge -- no central pull
+        var edgePad = min(width, height) * 0.15;
+        if (a.x < edgePad) a.x += (edgePad - a.x) * 0.025;
+        if (a.x > width - edgePad) a.x += (width - edgePad - a.x) * 0.025;
+        if (a.y < edgePad) a.y += (edgePad - a.y) * 0.025;
+        if (a.y > height - edgePad) a.y += (height - edgePad - a.y) * 0.025;
         // Attractor-to-attractor repulsion to keep them separated
         for (var j = 0; j < attractors.length; j++) {
             if (j === i) continue;
