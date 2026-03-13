@@ -7,7 +7,6 @@
     ['index.html', 'Home'],
     ['documents.html', 'Documents'],
     ['about.html', 'About'],
-    ['overview.html', 'Overview'],
     ['faq.html', 'FAQ'],
     ['glossary.html', 'Glossary'],
     ['founder.html', 'Founder'],
